@@ -1,0 +1,109 @@
+<!--
+ * @Author: Vinylonprophet 915390118@qq.com
+ * @Date: 2022-05-12 13:20:14
+ * @LastEditors: Vinylonprophet 915390118@qq.com
+ * @LastEditTime: 2022-05-12 14:19:49
+ * @FilePath: \CSS\demo9\index.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>五边形和六边形</title>
+    <style>
+        .composition{
+            margin-top: 200px;
+            display: flex;
+            justify-content: space-around;
+        }
+        #five{
+            height: 0px;
+            width: 54px;
+            border-left: 18px solid transparent;
+            border-right: 18px solid transparent;
+            border-bottom: 50px solid transparent;
+            border-top: 50px solid #f00;
+            position: relative;
+        }
+        #five::after{
+            content: '';
+            height: 0px;
+            width: 0px;
+            border-bottom: 36px solid #f00;
+            border-right: 45px solid transparent;
+            border-left: 45px solid transparent;
+            border-top: 54px solid transparent;
+            top: -140px;
+            right: -18px;
+            position: absolute;
+        }
+        #diamond{
+            height: 100px;
+            width: 200px;
+            background: #f00;
+            position: relative;
+        }
+        #diamond::before{
+            content: '';
+            height: 0;
+            width: 100px;
+            border-bottom: 50px solid #f00;
+            border-top: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-left: 50px solid transparent;
+            top: -100px;
+            position: absolute;
+        }
+        #diamond::after{
+            content: '';
+            height: 0;
+            width: 100px;
+            border-bottom: 50px solid transparent;
+            border-top: 50px solid #f00;
+            border-right: 50px solid transparent;
+            border-left: 50px solid transparent;
+            top: 100px;
+            position: absolute;
+        }
+        #six{
+            height: 100px;
+            width: 200px;
+            background: #f00;
+            position: relative;
+        }
+        #six::before{
+            content: '';
+            height: 0;
+            width: 0;
+            border-bottom: 50px solid #f00;
+            border-top: 50px solid transparent;
+            border-right: 100px solid transparent;
+            border-left: 100px solid transparent;
+            top: -100px;
+            position: absolute;
+        }
+        #six::after{
+            content: '';
+            height: 0;
+            width: 0;
+            border-bottom: 50px solid transparent;
+            border-top: 50px solid #f00;
+            border-right: 100px solid transparent;
+            border-left: 100px solid transparent;
+            top: 100px;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class=" composition">
+        <div id="five"></div>
+        <div id="diamond"></div>
+        <div id="six"></div>
+    </div>
+    
+</body>
+</html>

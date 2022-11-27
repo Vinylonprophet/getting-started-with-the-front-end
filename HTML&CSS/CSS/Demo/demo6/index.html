@@ -1,0 +1,43 @@
+<!--
+ * @Author: Vinylonprophet 915390118@qq.com
+ * @Date: 2022-05-11 16:10:01
+ * @LastEditors: Vinylonprophet 915390118@qq.com
+ * @LastEditTime: 2022-05-11 16:52:55
+ * @FilePath: \CSS\demo6\index.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对话框</title>
+    <style>
+        .dialog{
+            background: rgb(22, 228, 42);
+            width: 300px;
+            height: 25px;
+            line-height: 25px;
+            margin: 90px auto;
+            border-radius: 6px;
+            color: white;
+            position: relative;
+            padding: 10px;
+        }
+        .dialog::before{
+            content: '';
+            border-top: 10px solid transparent;
+            border-left: 0 solid rgb(22, 228, 42);
+            border-right: 10px solid rgb(22, 228, 42);
+            border-bottom: 10px solid transparent;
+            position: absolute;
+            left: -10px;
+            top: 12.5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="dialog">Hello Everyone! I'm u father.</div>
+</body>
+</html>

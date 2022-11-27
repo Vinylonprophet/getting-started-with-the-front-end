@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>heart And egg</title>
+    <style>
+        .composition{
+            margin-top: 100px;
+            display: flex;
+            justify-content: space-around;
+        }
+        #heart1{
+            width: 100px;
+            height: 150px;
+            background: #f00;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+            transform: rotate(45deg);
+            position: relative;
+        }
+        #heart1::before{
+            content: '';
+            width: 100px;
+            height: 150px;
+            background: #f00;
+            margin: 200px auto;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+            transform: rotate(-90deg);
+            top: -175px;
+            left: -26px;
+            position: absolute;
+        }
+        #heart2{
+            width: 200px;
+            height: 200px;
+            background: #ff0;
+            position: relative;
+        }
+        #heart2::before{
+            content: '';
+            width: 100px;
+            height: 150px;
+            background: red;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+            transform-origin: 0 100%;
+            transform: rotate(-45deg);
+            left: 100px;
+            top: 25px;
+            position: absolute;
+        }
+        #heart2::after{
+            content: '';
+            width: 100px;
+            height: 150px;
+            background: red;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+            transform-origin: 100% 100%;
+            transform: rotate(45deg);
+            left: 100px;
+            top: 25px;
+            left: 0px;
+            position: absolute;
+        }
+        #egg{
+            width: 126px;
+            height: 180px;
+            background-color: #fa3;
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+        }
+    </style>
+</head>
+<body>
+    <div class="composition">
+        <div id="heart1"></div>
+        <div id="heart2"></div>
+        <div id="egg"></div>
+    </div>
+    
+</body>
+</html>

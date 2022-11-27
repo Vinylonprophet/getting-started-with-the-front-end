@@ -1,0 +1,153 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>轮播图</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #box {
+            width: 960px;
+            height: 540px;
+            margin: 5% auto;
+            position: relative;
+            /* background-color: skyblue; */
+        }
+        #box ul{
+            list-style: none;
+            height: 100%;
+        }
+        #box ul li{
+            height: 100%;
+        }
+        img{
+            height: 100%;
+            width: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #number {
+            height: 30px !important;
+            width: auto;
+            /* background-color: yellow; */
+            position: absolute;
+            right: 0px;
+            bottom: 10px;
+        }
+        #number li{
+            float: left;
+            height: 30px;
+            width: 30px;
+            margin: 0 5px;
+            border-radius: 50%;
+            background-color: white;
+            line-height: 30px;
+            text-align: center;
+        }
+        #number li:hover{
+            color: white;
+            background-color: red;
+            cursor: pointer;
+        }
+        .active{
+            color: white;
+            background-color: #f30 !important;
+        }
+    </style>
+    <script>
+        // window.onload=function(){
+        //     imgCount=0;
+        //     myImg=document.getElementById("myImg");
+        //     myBox=document.getElementById("box");
+        //     myNumberLi=document.getElementsByTagName("li");
+        //     for(i=1;i<myNumberLi.length;i++){                                   //访问每一个列表元素
+        //         myNumberLi[i].index=i;                                          //从0开始索引
+        //         console.log(myNumberLi[i].index);
+        //         console.log(myNumberLi[i].classList);
+        //         myNumberLi[i].onclick=function(){                               //给当前添加点击事件
+        //             for(i=0;i<myNumberLi.length;i++){                           //清除列表元素的类样式
+        //                 myNumberLi[i].classList.remove("active");               
+        //             }
+        //             this.classList.add("active");                               //给当前列表元素添加active
+        //             imgCount=this.innerHTML-1;                                  //调整图片的索引值
+        //             myImg.src="./img/img-"+imgCount+".jpg";
+        //         }
+        //     }
+        //     myBox.onmouseover=function(){
+        //         clearInterval(timeOut);
+        //     }
+        //     myBox.onmouseout=function(){
+        //         timeOut=setInterval(changeImg,1000);
+        //     }
+        //     function changeImg(){
+        //         imgCount++;
+        //         imgCount=imgCount%5;
+        //         myImg.src="./img/img-"+imgCount+".jpg";
+        //         for(i=0;i<myNumberLi.length;i++){
+        //             myNumberLi[i].classList.remove("active");
+        //         }
+        //         myNumberLi[imgCount+1].classList.add("active");
+        //     }
+        //     timeOut=setInterval(changeImg,1000);
+        // }
+
+
+
+
+
+
+        window.onload=function(){
+            imgCount=0;
+            myImg=document.getElementById("myImg");
+            myBox=document.getElementById("box");
+            myNumberLi=document.getElementsByTagName("li");
+            for(i=0;i<myNumberLi.length;i++){                                   //访问每一个列表元素
+                myNumberLi[i].index=i;                                          //从0开始索引
+                console.log(myNumberLi[i].index);
+                myNumberLi[i].onclick=function(){                               //给当前添加点击事件
+                    for(i=0;i<myNumberLi.length;i++){                           //清除列表元素的类样式
+                        myNumberLi[i].classList.remove("active");               
+                    }
+                    this.classList.add("active");                               //给当前列表元素添加active
+                    imgCount=this.innerHTML-1;                                  //调整图片的索引值
+                    myImg.src="./img/img-"+imgCount+".jpg";
+                }
+            }
+            myBox.onmouseover=function(){
+                clearInterval(timeOut);
+            }
+            myBox.onmouseout=function(){
+                timeOut=setInterval(changeImg,1000);
+            }
+            function changeImg(){
+                imgCount++;
+                imgCount=imgCount%5;
+                myImg.src="./img/img-"+imgCount+".jpg";
+                for(i=0;i<myNumberLi.length;i++){
+                    myNumberLi[i].classList.remove("active");
+                }
+                myNumberLi[imgCount].classList.add("active");
+            }
+            timeOut=setInterval(changeImg,1000);
+            console.log(document.all.length);
+        }
+    </script>
+</head>
+<body>
+    <div id="box">
+        <img src="./img/img-0.jpg" id="myImg">
+        <ul id="number">
+            <li class="active">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+    </div>
+</body>
+</html>

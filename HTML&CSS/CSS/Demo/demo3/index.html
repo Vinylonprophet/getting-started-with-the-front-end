@@ -1,0 +1,92 @@
+<!--
+ * @Author: Vinylonprophet 915390118@qq.com
+ * @Date: 2022-05-10 15:38:09
+ * @LastEditors: Vinylonprophet 915390118@qq.com
+ * @LastEditTime: 2022-05-10 16:05:46
+ * @FliePath: \qb_uniappc:\Users\尛丶\Desktop\Study\HTML&CSS\进阶\CSS\demo3\index.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFlieHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FlieHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>结构伪类选择器</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+    }
+    .demo{
+      border: 1px solid #ccc;
+      width: 300px;
+      padding: 10px;
+      margin: 50px auto
+    }
+    .demo li{
+      float: left;
+      list-style: none;
+      padding: 2px;
+      border: 1px solid #ccc;
+      margin-right: 4px;
+      width: 20px;
+    }
+    .demo a{
+      display: block;
+      width: 20px;
+      height: 20px;
+      text-align: center;
+      border-radius: 50%;
+      background-color: #f36;
+      text-decoration: none;
+    }
+    .clearfix{
+      clear: both;
+      overflow: auto;
+    }
+    .demo li:first-child{
+      background-color: greenyellow;
+    }
+    .demo li:last-child{
+      background-color: red;
+    }
+    /* 选择一个或者多个特定的,全选是n,odd基数,even偶数 */
+    /* :nth-of-type()是限制了元素的 */
+    .demo li:nth-child(3n+2){
+      background-color: blue;
+    }
+    .demo li:nth-last-child(2){
+      background-color: yellow;
+    }
+    .demo li:only-child{
+      background-color: #c44b93;
+    }
+  </style>
+</head>
+<body>
+  <div class="demo clearfix">
+    <!-- ul>li*10>a -->
+    <ul class=" clearfix">
+      <li><a href="">1</a></li>
+      <li><a href="">2</a></li>
+      <li><a href="">3</a></li>
+      <li><a href="">4</a></li>
+      <li><a href="">5</a></li>
+      <li><a href="">6</a></li>
+      <li><a href="">7</a></li>
+      <li><a href="">8</a></li>
+      <li><a href="">9</a></li>
+      <li><a href="">10</a></li>
+    </ul>
+  </div>
+  
+  
+  <div class="demo clearfix">
+    <!-- ul>li*10>a -->
+    <ul class=" clearfix">
+      <li><a href="">9</a></li>
+    </ul>
+  </div>
+</body>
+</html>

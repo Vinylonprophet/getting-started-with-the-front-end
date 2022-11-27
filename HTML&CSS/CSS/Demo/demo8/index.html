@@ -1,0 +1,83 @@
+<!--
+ * @Author: Vinylonprophet 915390118@qq.com
+ * @Date: 2022-05-12 10:21:31
+ * @LastEditors: Vinylonprophet 915390118@qq.com
+ * @LastEditTime: 2022-05-12 11:15:23
+ * @FilePath: \CSS\demo8\index.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>五角星和六角形</title>
+    <style>
+        #star {
+            width: 0px;
+            height: 0px;
+            border-bottom: 70px solid #f00;
+            border-left: 100px solid transparent;
+            border-right: 100px solid transparent;
+            border-top: 0px solid #f00;
+            margin: 80px auto;
+            transform: rotate(35deg);
+            position: relative;
+        }
+        #star::before{
+            content: '';
+            width: 0px;
+            height: 0px;
+            border-bottom: 80px solid #f00;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            border-top: 0px solid #f00;
+            position: absolute;
+            transform: rotate(-35deg);
+            top: -45px;
+            left: -65px;
+        }
+        #star::after{
+            content: '';
+            width: 0px;
+            height: 0px;
+            border-bottom: 70px solid #f00;
+            border-left: 100px solid transparent;
+            border-right: 100px solid transparent;
+            border-top: 0px solid #f00;
+            transform: rotate(-70deg);
+            position: absolute;
+            left: -105px;
+        }
+
+        #star2 {
+            width: 0px;
+            height: 0px;
+            border-bottom: 140px solid #f00;
+            border-left: 70px solid transparent;
+            border-right: 70px solid transparent;
+            border-top: 0px solid #f00;
+            margin: 300px auto;
+            position: relative;
+        }
+
+        #star2::before{
+            content: '';
+            width: 0px;
+            height: 0px;
+            border-bottom: 0px solid #f00;
+            border-left: 70px solid transparent;
+            border-right: 70px solid transparent;
+            border-top: 140px solid #f00;
+            position: absolute;
+            left: -70px;
+            top: 45px;
+        }
+    </style>
+</head>
+<body>
+    <div id="star"></div>
+    <div id="star2"></div>
+</body>
+</html>

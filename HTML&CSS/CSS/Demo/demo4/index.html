@@ -1,0 +1,73 @@
+<!--
+ * @Author: Vinylonprophet 915390118@qq.com
+ * @Date: 2022-05-11 13:56:55
+ * @LastEditors: Vinylonprophet 915390118@qq.com
+ * @LastEditTime: 2022-05-11 14:20:45
+ * @FilePath: \CSS\demo4\index.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪元素</title>
+    <style>
+        .demo{
+            border: 1px solid #ccc;
+            width: 300px;
+            margin: 100px auto;
+            padding: 10px;
+        }
+        .demo::first-letter{
+            font-size: 40px;
+            font-weight: 700;
+            float: left;
+        }
+        .demo::first-line{
+            color: aqua;
+        }
+        .demo01{
+            border: 1px solid #ccc;
+            width: 300px;
+            height: 300px;
+            text-align: center;
+            margin: 20px auto;
+            line-height: 100px;
+        }
+        .demo01::before{
+            content: '';
+            display: block;
+            width: 100px;
+            height: 100px;
+            background: url('./img/1.jpg');
+            background-size: cover;
+            margin: 0 auto;
+        }
+        .demo01::after{
+            content: '';
+            display: block;
+            width: 100px;
+            height: 100px;
+            background: url('./img/0.jpg');
+            background-size: cover;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class=" demo">
+        伪元素:before.和:after 可以做的东西是
+        相当惊人的。对于页面上的每一个元素，
+        你拥有了两个更灵活的、而且可以完成其
+        它HTML元素都能完成的东西的元素。它们
+        让一大堆有趣的设计成为可能，而且不会
+        对你的语义标签产生负面影响。
+    </div>
+    <div class=" demo01">
+        我在wx上面
+    </div>
+    
+</body>
+</html>

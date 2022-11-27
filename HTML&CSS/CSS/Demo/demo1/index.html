@@ -1,0 +1,39 @@
+<!--
+ * @Author: Vinylonprophet 915390118@qq.com
+ * @Date: 2022-05-10 14:46:06
+ * @LastEditors: Vinylonprophet 915390118@qq.com
+ * @LastEditTime: 2022-05-10 15:20:59
+ * @FilePath: \qb_uniappc:\Users\尛丶\Desktop\Study\HTML&CSS\进阶\CSS\代码\demo1\index.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World</title>
+</head>
+<body>
+    <img src="./img/avatar.jpg">
+    <style>
+        body{
+            text-align: center;
+        }
+        img{
+            border-radius: 50%;
+            /* 过渡0.5s 需要加前缀,因为浏览器渲染效果不同,用到caniuse*/
+            transition: all 0.5s;
+            -webkit-transform: all 0.5s;
+            -ms-transform: all 0.5s;
+            -o-transform: all 0.5s;
+            /* 手形鼠标 */
+            cursor: pointer;
+        }
+        img:hover{
+            /* 扩大1.1倍 */
+            transform: scale(1.1);
+        }
+    </style>
+</body>
+</html>

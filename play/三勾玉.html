@@ -1,0 +1,214 @@
+
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>三勾玉</title>
+        <style>
+            /* div {
+                width: 100px;
+                height: 100px;
+                background: red;
+                transition-property: width, height, border-radius, transform;
+                transition-duration: 1s;
+                -webkit-transition-property: width, height, border-radius, transform;
+                -webkit-transition-duration: 1s;
+            } */
+
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            body{
+                height: 100vh;
+                width: 100vw;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            div.eyes {
+                margin: auto;
+                height: 300px;
+                width: 300px;
+                background-color: rgb(226, 13, 13);
+                /* background: linear-gradient(-135deg, rgba(255, 0, 0, 0.871),rgb(184, 26, 26)); */
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition-property: transform;
+                transition-duration: 1s;
+                transition-timing-function: ease;
+                -webkit-transition-property: transform;
+                -webkit-transition-duration: 1s;
+                -webkit-transition-timing-function: ease;
+                
+                
+            }
+
+            div.eyes:hover {
+                transform: rotate(360deg) scale(1.5);
+            }
+
+            div.eyes:hover .gy2 {
+                opacity: 1;
+                transition-duration: 0.25s;
+                -webkit-transition-duration: 0.25s;
+            }
+
+            div.eyes:hover .gy3 {
+                opacity: 1;
+                transition-delay: 0.25s;
+                transition-duration: 0.5s;
+                -webkit-transition-duration: 0.5s;
+            }
+
+            div.eyes2 {
+                margin: auto;
+                height: 200px;
+                width: 200px;
+                background-color: rgb(226, 13, 13);
+                box-sizing: content-box;
+                border: 2px solid black;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+            }
+
+            div.gy1 {
+                height: 50px;
+                /* width: 50px; */
+                background-color: transparent;
+                border-radius: 50%;
+                border-left: 25px solid black;
+                border-right: 25px solid transparent;
+                position: absolute;
+                top: -12.5%;
+                transform: rotate(45deg);
+            }
+
+            div.gy1::after{
+                content: '';
+                width: 35px;
+                height: 35px;
+                background-color: black;
+                border-radius: 50%;
+                position: absolute;
+                left: -17.5px;
+                top: 15.5px;
+            }
+
+            div.gy1::before{
+                content: '';
+                width: 20px;
+                height: 20px;
+                background-color: rgb(226, 13, 13);
+                /* border: 12.5px solid yellow; */
+                border-radius: 50%;
+                position: absolute;
+                left: -10px;
+            }
+
+            div.gy2 {
+                opacity: 0;
+                height: 50px;
+                background-color: transparent;
+                border-radius: 50%;
+                border-left: 25px solid black;
+                border-right: 25px solid transparent;
+                position: absolute;
+                bottom: 2.5%;
+                left: -5%;
+                transform: rotate(-90deg);
+            }
+
+            div.gy2::after{
+                content: '';
+                width: 35px;
+                height: 35px;
+                background-color: black;
+                border-radius: 50%;
+                position: absolute;
+                left: -17.5px;
+                top: 15.5px;
+            }
+
+            div.gy2::before{
+                content: '';
+                width: 20px;
+                height: 20px;
+                background-color: rgb(226, 13, 13);
+                border-radius: 50%;
+                position: absolute;
+                left: -10px;
+            }
+
+            div.gy3 {
+                opacity: 0;
+                height: 50px;
+                background-color: transparent;
+                border-radius: 50%;
+                border-left: 25px solid black;
+                border-right: 25px solid transparent;
+                position: absolute;
+                bottom: 2.5%;
+                right: -5%;
+                transform: rotate(180deg);
+            }
+
+            div.gy3::after{
+                content: '';
+                width: 35px;
+                height: 35px;
+                background-color: black;
+                border-radius: 50%;
+                position: absolute;
+                left: -17.5px;
+                top: 15.5px;
+            }
+
+            div.gy3::before{
+                content: '';
+                width: 20px;
+                height: 20px;
+                background-color: rgb(226, 13, 13);
+                border-radius: 50%;
+                position: absolute;
+                left: -10px;
+            }
+
+            div.eye3 {
+                background-color: black;
+                border-radius: 50%;
+                width: 100px;
+                height: 100px;
+            }
+
+            /* div:hover {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                transform: rotate(45deg);
+            } */
+        </style>
+    </head>
+
+    <body>
+
+        <div class="eyes">
+            <div class="eyes2">
+                <div class="eye3"></div>
+                <div class="gy1"></div>
+                <div class="gy2"></div>
+                <div class="gy3"></div>
+            </div>
+        </div>
+
+    </body>
+
+    </html>
